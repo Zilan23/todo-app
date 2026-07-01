@@ -67,3 +67,42 @@ button {
   from { opacity: 0; transform: translateY(5px); }
   to { opacity: 1; transform: translateY(0); }
 }
+/* --- MOBİL UYUMLULUK AYARLARI --- */
+@media (max-width: 480px) {
+  /* Ana kutunun (To-Do Container) mobilde ekrandan taşmasını önler */
+  .todo-container, .app, .container { 
+    width: 90% !important; 
+    max-width: 90% !important;
+    margin: 10px auto !important;
+    padding: 15px !important;
+  }
+
+  /* Yazı boyutlarını mobilde biraz küçültür */
+  h1, .title {
+    font-size: 1.8rem !important;
+    text-align: center;
+  }
+
+  /* Input (yazı yazma alanı) ve butonu alt alta veya daha düzgün sıralar */
+  .input-section, .todo-form {
+    display: flex;
+    flex-direction: column; /* Alt alta sıralar */
+    gap: 10px;
+  }
+
+  input[type="text"] {
+    width: 100% !important;
+    font-size: 16px !important; /* Mobilde inputa tıklayınca ekranın otomatik yakınlaşmasını engeller */
+  }
+
+  button {
+    width: 100% !important;
+    padding: 12px !important;
+  }
+
+  /* To-Do listesindeki her bir elemanın mobildeki aralıkları */
+  li, .todo-item {
+    font-size: 14px !important;
+    padding: 10px !important;
+  }
+}
